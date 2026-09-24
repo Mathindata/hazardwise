@@ -1,0 +1,35 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Secrets / config
+.env
+*.env
+**/secrets.py
+**/credentials.json
+
+# Data (exclude by default — add back specific sample files explicitly if needed)
+*.db
+*.sqlite
+*.tif
+*.tiff
+*.shp
+*.gdb/
+reports_debug/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Duplicate files (you have "SETUP (1).md" etc. — clean these up before pushing)
+*(1).md
+*(2).md

@@ -1,0 +1,78 @@
+{
+  "address": "T0A 1N1",
+  "risk_class": "Low",
+  "mode": "satellite_only",
+  "estimate": {
+    "aep_central": 2.3972496976387703e-07,
+    "aep_ci_lo": 0.0,
+    "aep_ci_hi": 0.06364311085193236,
+    "grade": "C",
+    "explanation_chain": [
+      "Satellite-only mode: no hydrometric gauge or HYDAT record was used; every quantity below is observable from space + terrain.",
+      "Terrain: HAND computed on the 30 m national DEM (MRDEM), channel scale 5.0 km2; this address sits 4.9 m above the nearest mapped channel.",
+      "Flood history: 38 years of optical water observations (JRC Global Surface Water, 1984-2021) were binned by HAND to give an empirical wet-probability curve for THIS reach; monotonicity in height is enforced (water cannot prefer higher ground).",
+      "The curve evaluated at the address's HAND gives the central annual probability 0.0%; the credible range 0.0%-6.4% combines within-band spread, spatial-correlation-deflated sample size, and the Bayesian posterior.",
+      "Observed flood extents: none available for this window yet \u2014 the estimate rests on the occurrence history alone.",
+      "Model constants: satellite-only defaults (occ_to_annual=1.0, px_decorr=25.0, prior_w=8, channel_km2=5.0)",
+      "Regional flood history (40 km window): the 38-year JRC occurrence record is a frequency, not a dated-event list; per-event flood history awaits the EGS extent connector (M-SAT-1)."
+    ],
+    "mandatory_caveats": [
+      "No in-situ gauge: the evidence grade is capped at C by construction. A gauged HazardWise report supersedes this one wherever it exists.",
+      "Optical occurrence under-counts short-duration and under-cloud floods, so the central probability is best read as a LOWER bound of that evidence channel; the upper credible bound carries that asymmetry.",
+      "SAR/optical water mapping is unreliable under dense canopy and in built-up cores; occurrence there reads low regardless of true flooding.",
+      "The occurrence-to-annual-probability mapping is an interim disclosed form (constant above); it is replaced, not tuned."
+    ],
+    "gauges_used": []
+  },
+  "indices": {
+    "HAND \u2014 height above nearest channel": "4.9 m",
+    "Closed-depression fill depth": "0.00 m",
+    "Water occurrence at address (JRC 1984-2021)": "0%",
+    "Distance to permanent water": "n/a",
+    "Observed flood events in window": "0",
+    "Effective satellite record": "38 yr optical (JRC) ",
+    "Annual exceedance probability (central)": "0.00%",
+    "Credible range": "0.00% - 6.36%"
+  },
+  "map": {
+    "mode": "probability",
+    "title": "Flood probability (annual exceedance)",
+    "out_png": "reports_dual\\t0a-1n1\\_flood\\t0a-1n1\\flood_map.png",
+    "legend_blocks": {
+      "bins": true,
+      "permanent_water": true,
+      "observed_extents": true,
+      "uncertainty": true,
+      "bin_hatches": true,
+      "provenance": true
+    },
+    "provenance": "basemap (c) OpenStreetMap contributors | no observed extents | HAND: MRDEM-30 | grid 10 m | JRC 1984-2021 | Model constants: satellite-only defaults (occ_to_annual=1.0, px_decorr=25.0, prior_w=8, channel_km2=5.0)",
+    "address_bin": -1,
+    "geocode_gated": false,
+    "integrity": {
+      "map_grade_mismatch": 0,
+      "map_legend_missing": 0,
+      "map_bad_susceptibility_legend": 0,
+      "map_extent_grade_conflicts": 0
+    },
+    "gauge_case": "SATELLITE_ONLY"
+  },
+  "sources": [
+    [
+      "EC JRC / Google \u2014 Global Surface Water v1.4 (occurrence 1984-2021)",
+      "https://global-surface-water.appspot.com/"
+    ],
+    [
+      "NRCan \u2014 Emergency Geomatics Service flood extents (SAR-derived)",
+      "https://open.canada.ca/data/en/dataset/74144824-206e-4cea-9fb9-72925a128189"
+    ],
+    [
+      "NRCan \u2014 MRDEM 30 m Digital Terrain Model (CanElevation)",
+      "https://open.canada.ca/data/en/dataset/18752265-bda3-498c-a4ba-9dfe68cb98da"
+    ],
+    [
+      "OpenStreetMap Nominatim (geocoding)",
+      "https://nominatim.openstreetmap.org/"
+    ]
+  ]
+}

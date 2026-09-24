@@ -1,0 +1,81 @@
+{
+  "address": "T0A 1N1",
+  "risk_class": "Low",
+  "mode": "satellite_only",
+  "estimate": {
+    "aep_central": 7.495897232989712e-05,
+    "aep_ci_lo": 8.257553199220169e-06,
+    "aep_ci_hi": 0.00019260798772946508,
+    "grade": "C",
+    "explanation_chain": [
+      "Wildfire, satellite/archive-only mode: no in-situ fire-weather station or provincial assessment was used.",
+      "NBAC loaded: 0 perimeter-years in window, 53-yr record.",
+      "Burn history: 0 NBAC perimeter-years over a 53-year record; the mean annual fraction of burnable land burned in this window is 0.0165% (CI 0.0000%-6.7584%) \u2014 the regional base rate.",
+      "Local exposure: this address is 0 m from continuous wildland fuel (exposure e-fold 500 m) on 2 deg terrain (slope multiplier up to 1+0.5).",
+      "Annual burn probability = 1 - exp(-rate x exposure x slope), updated per-pixel by observed burned-year counts (Beta-Binomial; pixel trials deflated 5x for correlation with the regional rate, which the same years estimated).",
+      "The graded number is REACH probability: the maximum within 250 m of the address (0.01%, vs 0.01% at the exact pixel) \u2014 a fire at the fence line is the risk to the structure.",
+      "Reach-back: no mapped historical burn intersects this window.",
+      "Result: 0.01% central (CI 0.00%-0.02%) -> Low.",
+      "Regional-rate floor applied: the 40 km burn history implies a base rate of 0.0165%, above the 0.0000% measured inside the 3 km map window; the higher, region-supported rate is used so this number cannot contradict the history below (B2).",
+      "Model constants: fire defaults v0.22 (wui_decay=500.0 m, slope_boost=0.5, c=1.0, prior_w=8)",
+      "Regional fire history (40 km window): Past 10 years: 5 mapped fires (NBAC >=200 ha) (years: 2025, 2024, 2023, 2022, 2018); nearest 6.3 km (2025). Past 20 years: 10 mapped fires (NBAC >=200 ha) (years: 2025, 2024, 2023, 2022, 2018, 2012, ...); nearest 4.4 km (2009). Past 50 years: 22 mapped fires (NBAC >=200 ha) (years: 2025, 2024, 2023, 2022, 2018, 2012, ...); nearest 4.4 km (2009)."
+    ],
+    "mandatory_caveats": [
+      "Archive-only: grade capped at C. NBAC maps burns >~ 200 ha reliably; small/urban-interface fires are under-represented, so the central value is a lower bound of this evidence channel.",
+      "No fire-weather forecast is included: this is climatological frequency, not current-season danger (CWFIS FWI is the M-FIRE-2 addition).",
+      "The exposure/slope form is an interim disclosed model; it is replaced, not tuned (Lever 3)."
+    ],
+    "gauges_used": []
+  },
+  "indices": {
+    "Distance to continuous wildland fuel": "0 m",
+    "Terrain slope at address": "2 deg",
+    "Fuel fraction within 500 m": "100%",
+    "NBAC record length": "53 years",
+    "Historical burns in window": "0",
+    "Nearest historical burn": "none mapped",
+    "Fires within 10 yr (regional)": "5, nearest 6.3 km",
+    "Fires within 20 yr (regional)": "10, nearest 4.4 km",
+    "Fires within 50 yr (regional)": "22, nearest 4.4 km",
+    "Annual burn probability (central)": "0.01%",
+    "Credible range": "0.00% - 0.02%"
+  },
+  "map": {
+    "mode": "probability",
+    "legend_blocks": {
+      "bins": true,
+      "fuel": true,
+      "perimeters": false,
+      "provenance": true
+    },
+    "address_bin": -1,
+    "provenance": "NBAC 53 yr record | MRDEM slope | grid 10 m | Model constants: fire defaults v0.22 (wui_decay=500.0 m, slope_boost=0.5, c=1.0, prior_w=8)",
+    "integrity": {
+      "map_grade_mismatch": 0,
+      "map_legend_missing": 0,
+      "map_bad_susceptibility_legend": 0
+    }
+  },
+  "sources": [
+    [
+      "NRCan/CWFIS \u2014 NBAC National Burned Area Composite (annual burn perimeters, 1972-present)",
+      "https://cwfis.cfs.nrcan.gc.ca/datamart"
+    ],
+    [
+      "NRCan/CWFIS \u2014 FBP fuel type grids & Fire Weather Index climatology",
+      "https://cwfis.cfs.nrcan.gc.ca/"
+    ],
+    [
+      "NASA FIRMS \u2014 VIIRS/MODIS hotspot archive (event timing/reach-back)",
+      "https://firms.modaps.eosdis.nasa.gov/"
+    ],
+    [
+      "NRCan \u2014 MRDEM 30 m DTM (slope/aspect)",
+      "https://open.canada.ca/data/en/dataset/18752265-bda3-498c-a4ba-9dfe68cb98da"
+    ],
+    [
+      "OpenStreetMap Nominatim (geocoding)",
+      "https://nominatim.openstreetmap.org/"
+    ]
+  ]
+}

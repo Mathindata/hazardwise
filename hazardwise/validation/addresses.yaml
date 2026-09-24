@@ -1,0 +1,81 @@
+# HazardWise validation set — real addresses with independently documented risk.
+#
+# Labels come from public flood-event records (2013 Alberta floods, 2017/2019
+# Ottawa River floods, 2019 Muskoka flood, 2018 Grand Forks flood, 2021 BC
+# atmospheric river). Civic/public addresses are used deliberately: risk
+# attaches to LOCATION, and public buildings avoid pointing reports at private
+# homes. Two anchors (High River town hall, Merritt city hall) were verified
+# against municipal websites in July 2026.
+#
+# expected_risk: High / Medium / Low  — refine as better ground truth arrives.
+# The harness reports geocode confidence per address; a low-confidence geocode
+# on a cottage-style address is itself a finding, not a failure.
+
+addresses:
+  # ------------------------------------------------------------- Alberta
+  - address: "309B Macleod Trail SW, High River, AB"
+    expected_risk: High
+    evidence: >
+      Downtown High River was inundated in the June 2013 Highwood River flood;
+      the entire town was evacuated. Address verified on highriver.ca.
+  - address: "8900 48 Avenue NW, Calgary, AB"
+    expected_risk: High
+    evidence: >
+      Bowness Park / Bow Crescent area, Bow River. Heavily flooded June 2013;
+      Bowness was among the first Calgary communities evacuated.
+  - address: "4825 Mount Royal Gate SW, Calgary, AB"
+    expected_risk: Low
+    evidence: >
+      Mount Royal University campus sits on elevated ground in southwest
+      Calgary, far above Bow/Elbow flood stages; unaffected in 2013.
+
+  # ------------------------------------------------------------- Ontario
+  - address: "Bobcaygeon Road, Minden, ON"
+    expected_risk: High
+    evidence: >
+      Downtown Minden Hills along the Gull River flooded in 2013, 2017 and
+      2019 (Trent–Severn / Gull River system).
+  - address: "Bayview Drive, Constance Bay, Woodlawn, ON"
+    expected_risk: High
+    evidence: >
+      Constance Bay (Ottawa River) saw major flooding in 2017 and 2019 with
+      states of emergency and military assistance.
+  - address: "1 Manitoba Street, Bracebridge, ON"
+    expected_risk: Medium
+    evidence: >
+      Bracebridge (Muskoka River) declared emergencies in 2019; flooding
+      affected low-lying riverfront areas while the elevated downtown core
+      was largely spared — hence Medium at the municipal-office location.
+  - address: "101 Town Centre Boulevard, Markham, ON"
+    expected_risk: Low
+    evidence: >
+      Markham Civic Centre; away from Rouge River flood plain, no documented
+      riverine flood history at this site.
+
+  # ------------------------------------------------------- British Columbia
+  - address: "2185 Voght Street, Merritt, BC"
+    expected_risk: High
+    evidence: >
+      Merritt was fully evacuated in November 2021 when the Coldwater River
+      overtopped; city hall address verified on merritt.ca.
+  - address: "7217 4th Street, Grand Forks, BC"
+    expected_risk: High
+    evidence: >
+      Downtown Grand Forks was inundated in the May 2018 Kettle/Granby
+      freshet — the worst flood in the city's recorded history.
+  - address: "Tolmie Road, Abbotsford, BC"
+    expected_risk: High
+    evidence: >
+      Sumas Prairie; catastrophic inundation in the November 2021 atmospheric
+      river event (former Sumas Lake bed).
+  - address: "3333 University Way, Kelowna, BC"
+    expected_risk: Low
+    evidence: >
+      UBC Okanagan campus, elevated bench well above Okanagan Lake and Mill
+      Creek flood levels.
+  - address: "7 Victoria Street West, Kamloops, BC"
+    expected_risk: Medium
+    evidence: >
+      Downtown Kamloops near the Thompson confluence: freshet flood advisories
+      recur (e.g. 2018), but dikes and elevation have prevented major inundation
+      of the core — a genuine intermediate case.

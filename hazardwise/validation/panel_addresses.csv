@@ -1,0 +1,25 @@
+address,expected_flood,expected_fire,note
+"309B Macleod Trail SW, High River, AB",High,,
+"8900 48 Avenue NW, Calgary, AB",High,,
+"4825 Mount Royal Gate SW, Calgary, AB",Low,,
+"Bobcaygeon Road, Minden, ON",High,,
+"Bayview Drive, Constance Bay, Woodlawn, ON",High,,
+"1 Manitoba Street, Bracebridge, ON",Medium,,
+"101 Town Centre Boulevard, Markham, ON",Low,,
+"2185 Voght Street, Merritt, BC",High,,
+"7217 4th Street, Grand Forks, BC",High,,
+"Tolmie Road, Abbotsford, BC",High,,
+"3333 University Way, Kelowna, BC",Low,,
+"7 Victoria Street West, Kamloops, BC",Medium,,
+"Connaught Drive, Jasper, AB",,High,2024 Jasper fire reached the townsite
+"Beacon Hill Drive, Fort McMurray, AB",,High,2016 Horse River fire
+"Main Street, Lytton, BC",,High,2021 fire destroyed the village
+"Westside Road, West Kelowna, BC",,High,2023 McDougall Creek fire
+"Main Street SW, Slave Lake, AB",,High,2011 fire burned a third of town
+"Westwood Hills, Upper Tantallon, NS",,Medium,2023 WUI fire; suppression-rich region
+"Bayview Drive, Constance Bay, ON",,Medium,WUI pine on sand; Ottawa Valley fire years
+"Three Sisters Drive, Canmore, AB",,Medium,"montane WUI, managed fuels"
+"5th Avenue, Prince George, BC",,Medium,boreal interface city
+"Bay Street, Toronto, ON",,Low,"urban core, no wildland fuel"
+"Robson Street, Vancouver, BC",,Low,urban core
+"Portage Avenue, Winnipeg, MB",,Low,urban prairie core

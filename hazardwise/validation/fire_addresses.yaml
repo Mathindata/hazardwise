@@ -1,0 +1,17 @@
+# Labeled wildfire panel — expectations grounded in documented fire history.
+# Until the live NBAC connector lands (M-FIRE-1) every row returns
+# UNDETERMINED (grade-D screening); this panel IS the acceptance gate for
+# that milestone: it passes when the connector turns screenings into grades.
+addresses:
+  - {address: "Connaught Drive, Jasper, AB",            expected_risk: High,   note: "2024 Jasper fire reached the townsite"}
+  - {address: "Beacon Hill Drive, Fort McMurray, AB",   expected_risk: High,   note: "2016 Horse River fire"}
+  - {address: "Main Street, Lytton, BC",                expected_risk: High,   note: "2021 fire destroyed the village"}
+  - {address: "Westside Road, West Kelowna, BC",        expected_risk: High,   note: "2023 McDougall Creek fire"}
+  - {address: "Main Street SW, Slave Lake, AB",         expected_risk: High,   note: "2011 fire burned a third of town"}
+  - {address: "Westwood Hills, Upper Tantallon, NS",    expected_risk: Medium, note: "2023 WUI fire; suppression-rich region"}
+  - {address: "Bayview Drive, Constance Bay, ON",       expected_risk: Medium, note: "WUI pine on sand; Ottawa Valley fire years"}
+  - {address: "Three Sisters Drive, Canmore, AB",       expected_risk: Medium, note: "montane WUI, managed fuels"}
+  - {address: "5th Avenue, Prince George, BC",          expected_risk: Medium, note: "boreal interface city"}
+  - {address: "Bay Street, Toronto, ON",                expected_risk: Low,    note: "urban core, no wildland fuel"}
+  - {address: "Robson Street, Vancouver, BC",           expected_risk: Low,    note: "urban core"}
+  - {address: "Portage Avenue, Winnipeg, MB",           expected_risk: Low,    note: "urban prairie core"}
