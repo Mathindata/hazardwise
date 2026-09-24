@@ -1,4 +1,5 @@
 # HazardWise v0.10 — min-HAND semantics (the misses bundle diagnosis)
+HazardWise is a property risk assessment system for flood and wildfire hazards in Canada. It combines hydrometric records (HYDAT), terrain analysis (HAND on MRDEM-30 elevation data), and wildfire burn history (NBAC) into a single pipeline, producing per-property risk reports for both hazards together. Flood risk is estimated using a statistical core built on extreme value methods (GEV and Log-Pearson III), with a confidence grading system (A through D) that reflects how much data is actually available for a given location. The system is built around two principles: every number in a report should trace back to an evidence chain the user can inspect, and uncertainty is reported honestly with credible intervals rather than hidden behind a single confident-looking score.
 
 The misses_bundle finally exposed the true common cause of the persistent
 Ontario/BC misses — NOT the rating curve alone, but a HAND semantics error:
